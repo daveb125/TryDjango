@@ -1,3 +1,3 @@
 # TryDjango
 
-An on the go insurance app to test my skills in Python and Django.
+An on the go insurance app to develop skills in Python and Django.

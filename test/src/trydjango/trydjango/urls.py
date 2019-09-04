@@ -16,6 +16,22 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from pages.views import home_view,buycover_view,yourcover_view,help_view,login_view,profile_view
+
 urlpatterns = [
+    #Home
+    path('',home_view, name='home'),
+    path('home/',home_view, name='home'),
+    #Your Profile
+    path('profile/',profile_view, name='profile'),
+    #Buy Cover
+    path('buycover/',buycover_view, name='buycover'),
+    #Your Cover
+    path('yourcover/',yourcover_view, name='yourcover'),
+    #Help
+    path('help/',help_view, name='help'),
+    #Login  
+    path('login/',login_view,name='login'),
+    #Admin panel
     path('admin/', admin.site.urls),
 ]

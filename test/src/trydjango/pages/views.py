@@ -5,25 +5,28 @@ from django.shortcuts import render
 # Place to handle page creation
 
 #HomePage
-def home_view(*args,**kwargs):
-    return HttpResponse("<h1>Home</h1>") # string of HTML code
+def home_view(request,*args,**kwargs):
+    print(args,kwargs)  #empty for now
+    print(request.user) #jeremy user for db
+    #return HttpResponse("<h1>Home</h1>") # string of HTML code
+    return render(request,"home.html",{})
 
 #Login
-def login_view(*args,**kwargs):
-    return HttpResponse("<h1>Login</h1>") 
+def login_view(request,*args,**kwargs):
+    return render(request,"login.html",{})
 
 #Profile
-def profile_view(*args,**kwargs):
-    return HttpResponse("<h1>Profile</h1>") 
+def profile_view(request,*args,**kwargs):
+    return render(request,"profile.html",{})
 
 #BuyCover
-def buycover_view(*args,**kwargs):
-    return HttpResponse("<h1>BuyCover</h1>") 
+def buycover_view(request,*args,**kwargs):
+    return render(request,"buycover.html",{})
 
 #YourCover
-def yourcover_view(*args,**kwargs):
-    return HttpResponse("<h1>YourCover</h1>") 
+def yourcover_view(request,*args,**kwargs):
+    return render(request,"yourcover.html",{})
 
 #Help
-def help_view(*args,**kwargs):
-    return HttpResponse("<h1>Help</h1>") 
+def help_view(request,*args,**kwargs):
+    return render(request,"help.html",{})

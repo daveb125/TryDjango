@@ -30,3 +30,7 @@ def yourcover_view(request,*args,**kwargs):
 #Help
 def help_view(request,*args,**kwargs):
     return render(request,"help.html",{})
+
+#Register
+def register_view(request,*args,**kwargs):
+    return render(request,"register.html",{})

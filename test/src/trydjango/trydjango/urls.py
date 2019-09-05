@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from pages.views import home_view,buycover_view,yourcover_view,help_view,login_view,profile_view
+from pages.views import home_view,buycover_view,yourcover_view,help_view,login_view,profile_view,register_view
 
 urlpatterns = [
     #Home
@@ -34,7 +34,8 @@ urlpatterns = [
     #Login  
     path('login/',login_view,name='login'),
     #Admin panel
-    path('admin/', admin.site.urls)
-    
+    path('admin/', admin.site.urls),
+    #Register
+    path('register/',register_view,name='register'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

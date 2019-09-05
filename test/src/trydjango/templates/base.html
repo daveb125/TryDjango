@@ -1,13 +1,201 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>On the GO Cover</title>
-    </head>
-    <body>        
-        <!-- <h1> this is a navbar</h1> -->
-        {% include 'navbar.html' %}
-        {% block content %}  
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="A complete landing page solution for any business">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="assets/img/favicon/favicon.ico">
+  <title>devdap - Beautiful landing Page solution for your business</title>
+  <!-- <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500" rel="stylesheet">
+  <link rel="stylesheet" href="assets/vendor/strokegap/style.css">
+  <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/vendor/linearicons/style.css">
+  <link rel="stylesheet" href="assets/css/bundle.css">
+  <link rel="stylesheet" href="assets/css/style.css"> -->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'assets/vendor/strokegap/style.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/vendor/font-awesome/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/vendor/linearicons/style.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/bundle.css '%}">
+  <link rel="stylesheet" href="{% static 'assets/css/style.css '%}">
+
+</head>
+
+<body id="top">
+ 
+  <header class="header header-shrink header-inverse fixed-top">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg px-md-0">
+        <a class="navbar-brand" href="\home">
+          <span class="logo-default">
+            <h2 class="text-white">Insta COVER</h2>
+          </span>
+          <span class="logo-inverse">
+            <h2 class="text-white">Insta COVER</h2>
+          </span>
+        </a>
+        <button class="navbar-toggler p-0" data-toggle="collapse" data-target="#navbarNav">
+          <div class="hamburger hamburger--spin js-hamburger">
+            <div class="hamburger-box">
+              <div class="hamburger-inner"></div>
+            </div>
+          </div>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="\home">HOME</a>
+            </li>
+           
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Buy Cover
+                <i class="lnr lnr-chevron-down u-fs-12 ml-1"></i>
+              </a>
+              <div class="dropdown-menu box-shadow-v2" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="\buycover">coverActive</a>
+                <a class="dropdown-item" href="\buycover">coverMid</a>
+                <a class="dropdown-item" href="\buycover">CoverSenior</a>               
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Your Profile
+                  <i class="lnr lnr-chevron-down u-fs-12 ml-1"></i>
+                </a>
+                <div class="dropdown-menu box-shadow-v2" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="\yourcover">Your Cover</a>
+                  <a class="dropdown-item" href="\profile">Your Profile</a>
+                  <a class="dropdown-item" href="#">History</a>
+              
+                </div>
+              </li>         
+                  
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#">
+                Contact
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="\help">
+                  Help
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link" href="\login">
+                    Login
+                  </a>
+                </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+       
+ 
+  <section class="u-py-100 u-h-100vh u-flex-center bg-purple">
+        {% block content %}  
+        <h1>base.html</h1> <!-- actual templates replace this section !-->        
         {% endblock %}
-    </body>
+      </section>     
+
+  
+ 
+  <footer>
+    <section class="bg-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <h2>Insta COVER</h2>
+            <p class="u-my-40">
+              Accidental or Death cover on the GO!
+            </p>
+            <form class="form-inline">
+              <div class="input-group box-shadow-v1 u-rounded-50 bg-white u-of-hidden">
+                <div class="input-group-addon bg-white border-0 pl-4 pr-0">
+                  <span class="icon icon-Mail text-primary"></span>
+                </div>
+                <input type="text" class="form-control border-0 p-3" placeholder="Enter your email">
+                <button type="submit" class="input-group-btn btn bg-white">
+                  <span class="icon icon-Arrow text-primary"></span>
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-2 ml-auto">
+            <h4>Useful Links</h4>
+            <div class="u-h-4 u-w-50 bg-purple rounded mt-3 u-mb-40"></div>
+            <ul class="list-unstyled u-lh-2">
+              <li>
+                <a href="#">About Us </a>
+              </li>
+              <li>
+                <a href="#">Testimonials </a>
+              </li>
+              <li>
+                <a href="#">Pricing </a>
+              </li>
+              <li>
+                <a href="#">Contact Us</a>
+              </li>             
+            </ul>
+          </div>
+          <div class="col-lg-3 ml-auto">
+            <h4>Contact Info</h4>
+            <div class="u-h-4 u-w-50 bg-purple rounded mt-3 u-mb-40"></div>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <span class="icon icon-Phone2 text-primary mr-2"></span> 123. 456. 789
+              </li>
+              <li class="mb-2">
+                <span class="icon icon-Mail text-primary mr-2"></span>
+                <a href="">InstaCOVER@InstaCover.com</a>
+              </li>
+              <li class="mb-2">
+                <span class="icon icon-Pointer text-primary mr-2"></span> Cloud 9 Planet 12
+              </li>
+            </ul>
+            <ul class="list-inline social social-rounded social-white mt-4">
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fa fa-facebook"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fa fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fa fa-google-plus"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container text-center p-4">
+      <p class="mb-0">
+        Build with
+        <span class="icon icon-Heart text-primary mx-2"></span> Python and Django
+      </p>
+    </div>
+  </footer>
+  <div class="scroll-top bg-white box-shadow-v1">
+    <i class="fa fa-angle-up" aria-hidden="true"></i>
+  </div> 
+  <script src="{% static 'assets/js/bundle.js' %}"></script>
+  <script src="{% static 'assets/js/devdap.js' %}"></script>
+
+</body>
+
 </html>

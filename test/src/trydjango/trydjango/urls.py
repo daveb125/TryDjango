@@ -18,7 +18,7 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from pages.views import home_view,buycover_view,yourcover_view,help_view,login_view,profile_view,register_view
-
+from profiles.views import profile_detail_view
 urlpatterns = [
     #Home
     path('',home_view, name='home'),
@@ -32,7 +32,8 @@ urlpatterns = [
     #Help
     path('help/',help_view, name='help'),
     #Login  
-    path('login/',login_view,name='login'),
+    # path('login/',login_view,name='login'),
+    path('login/',profile_detail_view,name='login'),
     #Admin panel
     path('admin/', admin.site.urls),
     #Register

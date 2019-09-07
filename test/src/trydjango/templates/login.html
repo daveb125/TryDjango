@@ -35,6 +35,20 @@
                     <div class="col-lg-5 m-auto text-center">
                         <div class="card box-shadow-v2 bg-white u-of-hidden">
                             <h2 class="bg-purple-light m-0 py-3 text-white">Login</h2>
+                            <!-- Show Variables set from views.py -->
+                            {{my_text}},{{my_number}}
+                            <!-- Show Profile objects -->
+                            {{object.title}},{{object.name}}
+                            <ul>
+                                <!-- Show vars in forloop -->
+                            {% for my_sub_item in my_list%}
+                            {% if my_sub_item == 123 %} <!-- If statements-->
+                                <li>{{forloop.counter}} - {{my_sub_item|add:22}}</li>
+                            {% else %}
+                                <li>{{forloop.counter}} - {{my_sub_item}}</li>
+                            {% endif %} <!-- use elif for else if -->
+                            {% endfor %}
+                            </ul>
                             <div class="p-4 p-md-5">
                                 <form action="#" method="POST">
                                     <div class="input-group u-rounded-50 border u-of-hidden u-mb-20">
@@ -87,7 +101,7 @@
   <script src="{% static 'assets/js/devdap.js' %}"></script>
     </body>
       
-<!-- {{request.user}} -->
+
 
 </html>
 {% endblock %}  
